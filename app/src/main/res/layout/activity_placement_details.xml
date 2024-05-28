@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9f9f9"
+    tools:context=".StudentInfo.PlacementDetails">
+
+
+    <LinearLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentTop="true"
+        android:elevation="0dp">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="15dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:tint="@color/black" />
+
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/save_button_layout"
+        android:layout_below="@id/action_bar"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/margin_start"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="@dimen/margin_end"
+                android:fontFamily="@font/manrope_semibold"
+                android:text="Placement Details"
+                android:textColor="@color/black"
+                android:textSize="28sp" />
+
+            <TextView
+                style="@style/MaterialInputTextEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="@dimen/margin_end"
+                android:text="Please provide the below details correctly and make
+sure that you provide correct document details."
+                android:textAlignment="textStart"
+                android:textColor="@color/grey"
+                android:textSize="16sp" />
+
+            <TextView
+                style="@style/MaterialTextInputHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start"
+                android:layout_marginTop="@dimen/margin_end"
+                android:fontFamily="@font/product_sans_regular"
+                android:text="Do you have any company offer?"
+                android:textSize="16sp"
+                android:visibility="visible" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/placed_ans_layout"
+                style="@style/drop_down_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:hint="Answer"
+                app:endIconMode="dropdown_menu">
+
+                <AutoCompleteTextView
+                    android:id="@+id/placed_autocomplete_textview"
+                    style="@style/edit_text_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="none"
+                    android:paddingStart="15dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/placed_details_module"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/company_name_layout"
+                    style="@style/text_field_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/text_input_layout_margin_top"
+                    android:hint="Company Name"
+                    app:placeholderText="e.g Infosys LTD"
+                    app:placeholderTextAppearance="@style/placeholder_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/company_name"
+                        style="@style/edit_text_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/company_location_layout"
+                    style="@style/text_field_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/text_input_layout_margin_top"
+                    android:hint="Company Location"
+                    app:placeholderText="e.g Pune"
+                    app:placeholderTextAppearance="@style/placeholder_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/company_location"
+                        style="@style/edit_text_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/package_offered_layout"
+                    style="@style/text_field_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/text_input_layout_margin_top"
+                    android:hint="Offered Package"
+                    app:placeholderText="e.g 4.0 LPA"
+                    app:placeholderTextAppearance="@style/placeholder_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/package_offered"
+                        style="@style/edit_text_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/interview_date_layout"
+                    style="@style/text_field_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/text_input_layout_margin_top"
+                    android:hint="Interview Date"
+                    app:placeholderTextAppearance="@style/placeholder_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/interview_date"
+                        style="@style/edit_text_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:focusableInTouchMode="false"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/joining_date_layout"
+                    style="@style/text_field_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/text_input_layout_margin_top"
+                    android:hint="Joining Date(tentitive)"
+                    app:placeholderTextAppearance="@style/placeholder_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/joining_date"
+                        style="@style/edit_text_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:focusableInTouchMode="false"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/offer_letter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_start"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="@dimen/margin_end"
+                    android:background="@drawable/box_background_form_tab">
+
+                    <RelativeLayout
+                        android:id="@+id/part1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:background="?attr/selectableItemBackground"
+                        android:paddingStart="10dp"
+                        android:paddingTop="15dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="15dp">
+
+                        <ImageView
+                            android:id="@+id/icon5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:src="@drawable/ic_baseline_attach_file_24"
+                            app:tint="@color/grey" />
+
+                        <TextView
+                            style="@style/form_overview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="15dp"
+                            android:layout_toRightOf="@+id/icon5"
+                            android:text="Offer Letter"
+                            android:textColor="@color/grey" />
+
+                        <ImageView
+                            android:id="@+id/pdf_status"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            app:tint="@color/green" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/part2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/part1"
+                        android:background="?attr/selectableItemBackground"
+                        android:paddingStart="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="10dp"
+                        android:visibility="gone">
+
+
+                        <TextView
+                            android:id="@+id/pdf_name"
+                            style="@style/form_overview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="35dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_toLeftOf="@id/pdf_delete"
+                            android:text="Offer Letter Capgemini"
+                            android:textColor="@color/green" />
+
+                        <ImageButton
+                            android:id="@+id/pdf_delete"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:padding="0dp"
+                            android:src="@drawable/ic_cancel"
+                            app:tint="@color/green" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/pdf_error_message"
+                    style="@style/MaterialInputTextEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/gst_regular"
+                    android:text="Please attach the offer letter."
+                    android:textAlignment="center"
+                    android:textColor="@color/red"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/MaterialTextInputHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start"
+                android:layout_marginTop="@dimen/margin_end"
+                android:fontFamily="@font/product_sans_regular"
+                android:text="I am intersted for?"
+                android:textSize="16sp"
+                android:visibility="visible" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/interested_ans_layout"
+                style="@style/drop_down_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:hint="Answer"
+                app:endIconMode="dropdown_menu">
+
+                <AutoCompleteTextView
+                    android:id="@+id/interested_autocomplete_textview"
+                    style="@style/edit_text_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="none"
+                    android:paddingStart="15dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/save_button_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="@dimen/margin_start"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="@dimen/margin_end"
+
+        android:background="@color/white">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/save_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/green"
+            android:fontFamily="@font/product_sans_regular"
+            android:insetTop="1dp"
+            android:insetBottom="1dp"
+            android:letterSpacing="0"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:stateListAnimator="@null"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:elevation="2dp" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:elevation="3dp"
+            android:theme="@style/ProgressBarStyle"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/main_progress_bar"
+        style="@style/LoadingProgressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

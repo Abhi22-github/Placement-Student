@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".StudentInfo.EducationDetails">
+
+    <LinearLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:elevation="0dp">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="15dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:tint="@color/black" />
+
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/action_bar"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/margin_start"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="@dimen/margin_end"
+                android:fontFamily="@font/manrope_semibold"
+                android:text="Educational Details"
+                android:textColor="@color/black"
+                android:textSize="28sp" />
+
+            <TextView
+                style="@style/MaterialInputTextEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="@dimen/margin_end"
+                android:text="Please fill out all details correctly."
+                android:textAlignment="textStart"
+                android:textColor="@color/grey"
+                android:textSize="16sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ssc_layout"
+                style="@style/text_field_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="SSC Percentage"
+                app:placeholderText="e.g 82.52(only number)"
+                app:placeholderTextAppearance="@style/placeholder_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ssc"
+                    style="@style/edit_text_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ssc_passout_layout"
+                style="@style/text_field_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_input_layout_margin_top"
+                android:hint="SSC Passout Year"
+                app:placeholderText="e.g 2016"
+                app:placeholderTextAppearance="@style/placeholder_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ssc_passout"
+                    style="@style/edit_text_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ssc_college_layout"
+                style="@style/text_field_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_input_layout_margin_top"
+                android:hint="SSC College"
+                app:placeholderTextAppearance="@style/placeholder_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ssc_college"
+                    style="@style/edit_text_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/hsc_layout"
+                style="@style/drop_down_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="HSC Percentage"
+                app:endIconMode="dropdown_menu"
+                app:placeholderText="e.g 82.52(only number)"
+                app:placeholderTextAppearance="@style/placeholder_text">
+
+                <AutoCompleteTextView
+                    android:id="@+id/hsc"
+                    style="@style/edit_text_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="number"
+                    android:paddingStart="15dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/hsc_passout_layout"
+                style="@style/text_field_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_input_layout_margin_top"
+                android:hint="HSC Passout Year"
+                app:placeholderText="e.g 2016"
+                app:placeholderTextAppearance="@style/placeholder_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/hsc_passout"
+                    style="@style/edit_text_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/hsc_college_layout"
+                style="@style/text_field_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_input_layout_margin_top"
+                android:hint="HSC College"
+                app:placeholderTextAppearance="@style/placeholder_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/hsc_college"
+                    style="@style/edit_text_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/diploma_layout"
+                style="@style/drop_down_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Diploma Percentage"
+                app:endIconMode="dropdown_menu"
+                app:placeholderText="e.g 82.52(only number)"
+                app:placeholderTextAppearance="@style/placeholder_text">
+
+                <AutoCompleteTextView
+                    android:id="@+id/diploma"
+                    style="@style/edit_text_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="number"
+                    android:paddingStart="15dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/diploma_passout_layout"
+                style="@style/text_field_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_input_layout_margin_top"
+                android:hint="Diploma Passout Year"
+                app:placeholderText="e.g 2016"
+                app:placeholderTextAppearance="@style/placeholder_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/diploma_passout"
+                    style="@style/edit_text_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/diploma_college_layout"
+                style="@style/text_field_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_input_layout_margin_top"
+                android:hint="Diploma College"
+                app:placeholderTextAppearance="@style/placeholder_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/diploma_college"
+                    style="@style/edit_text_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/MaterialTextInputHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="@dimen/margin_end"
+                android:text="Graduation Details"
+                android:visibility="visible" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/margin_start"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="@dimen/margin_end"
+                android:background="@color/line_grey_new"
+                android:visibility="visible" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/year_layout"
+                style="@style/text_field_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Graduation Year"
+                app:placeholderText="e.g 2022"
+                app:placeholderTextAppearance="@style/placeholder_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/year"
+                    style="@style/edit_text_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/branch_layout"
+                style="@style/drop_down_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_input_layout_margin_top"
+                android:hint="Branch"
+                app:endIconMode="dropdown_menu">
+
+                <AutoCompleteTextView
+                    android:id="@+id/branch_autocomplete_textview"
+                    style="@style/edit_text_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="none"
+                    android:paddingStart="15dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/class_layout"
+                style="@style/drop_down_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_input_layout_margin_top"
+                android:hint="Class"
+                android:visibility="gone"
+                app:endIconMode="dropdown_menu">
+
+                <AutoCompleteTextView
+                    android:id="@+id/class_field"
+                    style="@style/edit_text_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="none"
+                    android:paddingStart="15dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/division_layout"
+                style="@style/drop_down_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_input_layout_margin_top"
+                android:hint="Division"
+                android:visibility="visible"
+                app:endIconMode="dropdown_menu">
+
+                <AutoCompleteTextView
+                    android:id="@+id/division"
+                    style="@style/edit_text_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="none"
+                    android:paddingStart="15dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:id="@+id/save_button_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="@dimen/margin_start"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="@dimen/margin_end"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/save_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/green"
+                    android:fontFamily="@font/product_sans_regular"
+                    android:insetTop="1dp"
+                    android:insetBottom="1dp"
+                    android:letterSpacing="0"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:stateListAnimator="@null"
+                    android:text="Save"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:elevation="2dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:elevation="3dp"
+                    android:theme="@style/ProgressBarStyle"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/main_progress_bar"
+        style="@style/LoadingProgressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

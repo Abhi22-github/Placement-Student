@@ -1,0 +1,137 @@
+<resources>
+    <string name="app_name">PlacementStudent</string>
+
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+
+    <!-- Change BOTH strings as required -->
+    <string name="back4app_app_id">PX6lXXYcJKKYdy4mczo6xzc8KBh7EZUWA2sL8u5u</string>
+    <string name="back4app_client_key">S3HZMm2QOb90RHNK9637LCVgYExp57HOtq24R0sy</string>
+
+    <string name="register"> <u>Register Now</u></string>
+    <string name="pending_verification_msg">Your account has been created successfully.Please wait
+    patiently while we are verifying your account.</string>
+    <string name="don_t_have_a_account">Don\'t have a account?</string>
+    <string name="already_have_account">Already have an account?</string>
+
+    <string name="id">firebaseId</string>
+    <string name="name">name</string>
+    <string name="address">address</string>
+    <string name="contactNo">contactNo</string>
+    <string name="erpNo">erpNo</string>
+    <string name="prnNo">prnNo</string>
+    <string name="birthDate">birthDate</string>
+    <string name="gender">gender</string>
+    <string name="ssc">ssc</string>
+    <string name="sscYear">sscYear</string>
+    <string name="sscCollege">sscCollege</string>
+    <string name="hsc">hsc</string>
+    <string name="hscYear">hscYear</string>
+    <string name="hscCollege">hscCollege</string>
+    <string name="diploma">diploma</string>
+    <string name="diplomaYear">diplomaYear</string>
+    <string name="diplomaCollege">diplomaCollege</string>
+    <string name="year">year</string>
+    <string name="branch">branch</string>
+    <string name="classField">class</string>
+    <string name="division">division</string>
+    <string name="sem1">sem1</string>
+    <string name="sem2">sem2</string>
+    <string name="sem3">sem3</string>
+    <string name="sem4">sem4</string>
+    <string name="sem5">sem5</string>
+    <string name="sem6">sem6</string>
+    <string name="sem7">sem7</string>
+    <string name="sem8">sem8</string>
+    <string name="aggregate">aggregate</string>
+    <string name="aggregatePercentage">aggregatePercentage</string>
+    <string name="activeBacklog">activeBacklog</string>
+    <string name="previousBacklog">previousBacklog</string>
+    <string name="gap">gap</string>
+    <string name="engineeringGap">engineeringGap</string>
+    <string name="gapYears">gapYears</string>
+    <string name="isPlaced">isPlaced</string>
+    <string name="placedCompanyName">placedCompanyName</string>
+    <string name="companyLocation">companyLocation</string>
+    <string name="offeredPackage">offeredPackage</string>
+    <string name="interviewDate">interviewDate</string>
+    <string name="joiningDate">joiningDate</string>
+    <string name="offerLetterUri">offerLetterUri</string>
+    <string name="offerLetterName">offerLetterName</string>
+    <string name="interestedFor">interestedFor</string>
+    <string name="internshipAns">internshipAns</string>
+    <string name="internshipCompanyName">internshipCompanyName</string>
+    <string name="position">internshipPosition</string>
+    <string name="duration">internshipDuration</string>
+    <string name="japaneseAns">japaneseAns</string>
+    <string name="jlpt">jlpt</string>
+    <string name="certificationAns">certificationAns</string>
+    <string name="certification">certification</string>
+
+
+    <string-array name="department">
+        <item>Computer Engineering</item>
+        <item>Information Technology</item>
+        <item>Civil Engineering</item>
+        <item>Mechanical Engineering</item>
+        <item>Production Engineering</item>
+        <item>Electrical Engineering</item>
+        <item>Automation and Robotics</item>
+        <item>E and TC Engineering</item>
+        <item>Electronics and Computer Engineering</item>
+    </string-array>
+    <string-array name="answers">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+    <string-array name="gapYears">
+        <item>1 year</item>
+        <item>2 years</item>
+        <item>more than 2 years</item>
+
+    </string-array>
+
+
+    <string-array name="not_applicable">
+        <item>Not applicable</item>
+    </string-array>
+
+    <string-array name="interestedFor">
+        <item>Placement</item>
+        <item>Higher Studies</item>
+        <item>Business</item>
+    </string-array>
+
+    <string-array name="jlpt">
+        <item>N5</item>
+        <item>N4</item>
+        <item>N3</item>
+        <item>N2</item>
+        <item>N1</item>
+    </string-array>
+
+    <string-array name="classes">
+        <item>First Year</item>
+        <item>Second Year</item>
+        <item>Third Year</item>
+        <item>Fourth Year</item>
+    </string-array>
+    <string-array name="divisions">
+        <item>A</item>
+        <item>B</item>
+    </string-array>
+
+    <string-array name="edit_choice">
+        <item>BE Aggregate</item>
+        <item>BE Aggregate Percentage</item>
+        <item>Sem 1 </item>
+        <item>Sem 2 </item>
+        <item>Sem 3 </item>
+        <item>Sem 4 </item>
+        <item>Sem 5 </item>
+        <item>Sem 6 </item>
+        <item>Sem 7 </item>
+        <item>Sem 8 </item>
+        <item>Active Backlog</item>
+        <item>Previous Backlog</item>
+    </string-array>
+</resources>
